@@ -1,33 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Newsletter View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NewsletterViewController" customModule="LearningTask_3_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hQj-v3-eab">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newsletter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZA-eF-Myz" userLabel="Label Titulo">
-                                <rect key="frame" x="32" y="629" width="350" height="43"/>
+                                <rect key="frame" x="32" y="421" width="350" height="43"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0b-Ka-0p4" userLabel="View Principal">
-                                <rect key="frame" x="0.0" y="696" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="488" width="414" height="408"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wW-O5-yoG" userLabel="Label Subtitulo">
+                                        <rect key="frame" x="32" y="26" width="298" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-C4-pXZ" userLabel="Button Close">
+                                        <rect key="frame" x="362" y="32" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="3g6-db-Q04"/>
+                                            <constraint firstAttribute="height" constant="20" id="8c1-Xg-Pwk"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Close"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastre seu email para receber ofertas, campanhas e promoções especiais." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md3-Yv-Cwz" userLabel="Label Descricao">
+                                        <rect key="frame" x="32" y="77.5" width="298" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCj-bN-1wS" userLabel="View Email">
+                                        <rect key="frame" x="32" y="206" width="350" height="48"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-RU-Bpr" userLabel="Email TextField">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="QAg-TO-1kR"/>
+                                                </constraints>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-DX-nfo" userLabel="View Borda Email">
+                                                <rect key="frame" x="0.0" y="47" width="350" height="1"/>
+                                                <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="0Ji-ol-fX9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="WgD-RU-Bpr" firstAttribute="leading" secondItem="JCj-bN-1wS" secondAttribute="leading" id="7Bm-bW-zMx"/>
+                                            <constraint firstItem="kHd-DX-nfo" firstAttribute="leading" secondItem="WgD-RU-Bpr" secondAttribute="leading" id="83I-Dt-Jk7"/>
+                                            <constraint firstItem="WgD-RU-Bpr" firstAttribute="bottom" secondItem="kHd-DX-nfo" secondAttribute="bottom" id="DXd-ZT-Gvg"/>
+                                            <constraint firstAttribute="trailing" secondItem="WgD-RU-Bpr" secondAttribute="trailing" id="Ocl-i1-Ab6"/>
+                                            <constraint firstItem="WgD-RU-Bpr" firstAttribute="top" secondItem="JCj-bN-1wS" secondAttribute="top" id="aqp-Dj-b73"/>
+                                            <constraint firstItem="kHd-DX-nfo" firstAttribute="width" secondItem="WgD-RU-Bpr" secondAttribute="width" id="bEs-Lq-1tR"/>
+                                            <constraint firstAttribute="bottom" secondItem="kHd-DX-nfo" secondAttribute="bottom" id="mdf-fW-8zr"/>
+                                            <constraint firstItem="kHd-DX-nfo" firstAttribute="trailing" secondItem="WgD-RU-Bpr" secondAttribute="trailing" id="qfg-Gl-4hy"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-CS-jdZ" userLabel="Button Confirmacao">
+                                        <rect key="frame" x="32" y="286" width="350" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="gVB-su-S0t"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Quero receber novidades!" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="baseBackgroundColor" name="Eagle"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="botaoConfirmacaoPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Hn-ya-1RL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="gXW-Ny-y8X"/>
+                                    <constraint firstItem="JCj-bN-1wS" firstAttribute="leading" secondItem="1wW-O5-yoG" secondAttribute="leading" id="2pO-7Q-bO7"/>
+                                    <constraint firstItem="lgl-C4-pXZ" firstAttribute="leading" secondItem="1wW-O5-yoG" secondAttribute="trailing" constant="32" id="QI9-GI-xDj"/>
+                                    <constraint firstItem="lgl-C4-pXZ" firstAttribute="top" secondItem="F0b-Ka-0p4" secondAttribute="top" constant="32" id="SfR-lI-UNj"/>
+                                    <constraint firstAttribute="trailing" secondItem="lgl-C4-pXZ" secondAttribute="trailing" constant="32" id="YMQ-cc-qgl"/>
+                                    <constraint firstItem="Md3-Yv-Cwz" firstAttribute="leading" secondItem="1wW-O5-yoG" secondAttribute="leading" id="Zkz-hs-jfp"/>
+                                    <constraint firstItem="1wW-O5-yoG" firstAttribute="centerY" secondItem="lgl-C4-pXZ" secondAttribute="centerY" id="dKr-on-3jw"/>
+                                    <constraint firstItem="JCj-bN-1wS" firstAttribute="top" secondItem="Md3-Yv-Cwz" secondAttribute="bottom" constant="64" id="dLp-aS-uZ5"/>
+                                    <constraint firstItem="Md3-Yv-Cwz" firstAttribute="top" secondItem="1wW-O5-yoG" secondAttribute="bottom" constant="20" id="guG-x9-uNe"/>
+                                    <constraint firstItem="Md3-Yv-Cwz" firstAttribute="trailing" secondItem="1wW-O5-yoG" secondAttribute="trailing" id="gwg-XI-Qbs"/>
+                                    <constraint firstItem="Wn2-CS-jdZ" firstAttribute="trailing" secondItem="JCj-bN-1wS" secondAttribute="trailing" id="hAR-M7-Y1d"/>
+                                    <constraint firstItem="1wW-O5-yoG" firstAttribute="leading" secondItem="F0b-Ka-0p4" secondAttribute="leading" constant="32" id="iwB-fu-xqM"/>
+                                    <constraint firstItem="Wn2-CS-jdZ" firstAttribute="leading" secondItem="JCj-bN-1wS" secondAttribute="leading" id="niL-id-nS6"/>
+                                    <constraint firstItem="Wn2-CS-jdZ" firstAttribute="top" secondItem="JCj-bN-1wS" secondAttribute="bottom" constant="32" id="tKE-x8-eCR"/>
+                                    <constraint firstItem="JCj-bN-1wS" firstAttribute="trailing" secondItem="lgl-C4-pXZ" secondAttribute="trailing" id="zfn-71-LUf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -41,12 +126,16 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="F0b-Ka-0p4" secondAttribute="bottom" id="6a2-C0-fp0"/>
                             <constraint firstItem="8EF-WU-MX1" firstAttribute="trailing" secondItem="F0b-Ka-0p4" secondAttribute="trailing" id="F1I-4d-D8a"/>
+                            <constraint firstItem="8EF-WU-MX1" firstAttribute="bottom" secondItem="Wn2-CS-jdZ" secondAttribute="bottom" constant="24" id="M6W-LE-I8X"/>
                             <constraint firstItem="8EF-WU-MX1" firstAttribute="trailing" secondItem="lZA-eF-Myz" secondAttribute="trailing" constant="32" id="bi7-fD-5sU"/>
                             <constraint firstItem="F0b-Ka-0p4" firstAttribute="leading" secondItem="8EF-WU-MX1" secondAttribute="leading" id="gKq-gR-BHB"/>
                             <constraint firstItem="lZA-eF-Myz" firstAttribute="leading" secondItem="8EF-WU-MX1" secondAttribute="leading" constant="32" id="sYP-iP-JJj"/>
                             <constraint firstItem="F0b-Ka-0p4" firstAttribute="top" secondItem="lZA-eF-Myz" secondAttribute="bottom" constant="24" id="wLD-7p-tpq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="WgD-RU-Bpr" id="HW1-u8-t7p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,11 +143,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Close" width="32" height="32"/>
         <namedColor name="Eagle">
             <color red="0.71799999475479126" green="0.7369999885559082" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
